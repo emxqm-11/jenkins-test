@@ -1,1 +1,2 @@
-# jenkins-test
+# bjb-hello-world
+bjb sample app to test pipelines
