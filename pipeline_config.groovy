@@ -1,5 +1,4 @@
 libraries{
     maven
-    sonarqube
     splunk
 }
