@@ -11,6 +11,7 @@ pipeline {
             steps {
               node(null){
                 echo 'Hello, Maven'
+                sh 'ls'
                 sh 'mvn clean compile' 
               }
             }
