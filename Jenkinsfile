@@ -1,6 +1,5 @@
-
 pipeline {
-    agent none
+    agent any
 
     tools {
         jdk 'jdk8'
@@ -11,12 +10,12 @@ pipeline {
         stage('mvn java test') {
             steps {
                 echo 'Hello, Maven'
-                sh 'ls'
+                ls 
             }
         }
         stage('run mvn wrapper') {
             steps {
-                sh './mvnw clean'
+                ./mvnw clean
             }
         }
     }
