@@ -7,6 +7,12 @@ pipeline {
     }
 
     stages {
+        stage('checkout') {
+            when { branch 'main' }
+            steps {
+                checkout scm
+            }
+        }
         stage('mvn clean') {
             steps {
               node(null){
