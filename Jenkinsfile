@@ -8,12 +8,17 @@ pipeline {
     }
 
     stages {
-        stage('install and sonar parallel') {
+        stage('mvn java test') {
             steps {
                 echo 'Hello, Maven'
                 sh 'mvn --version'
                 echo 'Hello, JDK'
                 sh 'java -version'
+            }
+        }
+        stage('run mvn wrapper') {
+            steps {
+                sh './mvnw clean'
             }
         }
     }
