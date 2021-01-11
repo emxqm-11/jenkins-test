@@ -7,18 +7,18 @@ pipeline {
     }
 
     stages {
-        stage('mvn java test') {
+        stage('mvn clean') {
             steps {
               node(null){
                 echo 'Hello, Maven'
-                sh 'ls' 
+                sh 'mvn clean compile' 
               }
             }
         }
         stage('run mvn wrapper') {
             steps {
               node(null) {
-                sh 'pwd'
+                sh './mvnw clean compile'
               }
             }
         }
