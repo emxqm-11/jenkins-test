@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('mvn java test') {
             steps {
-              node{
+              node(null){
                 echo 'Hello, Maven'
                 sh 'ls' 
               }
@@ -17,7 +17,7 @@ pipeline {
         }
         stage('run mvn wrapper') {
             steps {
-              node {
+              node(null) {
                 sh 'pwd'
               }
             }
