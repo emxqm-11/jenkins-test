@@ -5,14 +5,8 @@ pipeline {
         jdk 'jdk8'
         maven 'maven3'
     }
-
+    options { disableConcurrentBuilds() }
     stages {
-        stage('checkout') {
-            when { branch 'main' }
-            steps {
-                checkout scm
-            }
-        }
         stage('mvn clean') {
             steps {
               node(null){
