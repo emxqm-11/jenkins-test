@@ -11,9 +11,7 @@ pipeline {
         stage('mvn java test') {
             steps {
                 echo 'Hello, Maven'
-                sh 'mvn --version'
-                echo 'Hello, JDK'
-                sh 'java -version'
+                sh 'ls'
             }
         }
         stage('run mvn wrapper') {
