@@ -10,12 +10,12 @@ pipeline {
         stage('mvn java test') {
             steps {
                 echo 'Hello, Maven'
-                ls 
+                sh 'ls' 
             }
         }
         stage('run mvn wrapper') {
             steps {
-                pwd
+                sh 'pwd'
             }
         }
     }
