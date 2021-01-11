@@ -10,11 +10,10 @@ pipeline {
     stages {
         stage('install and sonar parallel') {
             steps {
-                parallel(install: {
-                    sh "mvn clean test"
-                }, sonar: {
-                    sh "mvn sonar:sonar -Dsonar.host.url=${env.SONARQUBE_HOST}"
-                })
+                echo 'Hello, Maven'
+                sh 'mvn --version'
+                echo 'Hello, JDK'
+                sh 'java -version'
             }
         }
     }
