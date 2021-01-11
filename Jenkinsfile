@@ -15,7 +15,7 @@ pipeline {
         }
         stage('run mvn wrapper') {
             steps {
-                ./mvnw clean
+                pwd
             }
         }
     }
